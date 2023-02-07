@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll snap type</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        overflow-x: scroll;
+        padding: 30px;
+        width: 80vw;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 30px;
+        border-radius: 8px;
+        gap: 12px;
+    }
+
+    .container>.item {
+        height: 80vh;
+        scroll-snap-align: start;
+    }
+
+    @media screen and (max-width:1000px) {
+        .container>.item {
+            flex: 0 0 100%;
+        }
+    }
+    .item>img {
+        object-fit: cover;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="item"><img src="./../img/nature1.webp" width="100%" height="100%" alt=""></div>
+        <div class="item"><img src="./../img/nature2.webp" width="100%" height="100%" alt=""></div>
+        <div class="item"><img src="./../img/nature3.webp" width="100%" height="100%" alt=""></div>
+        <div class="item"><img src="./../img/nature4.webp" width="100%" height="100%" alt=""></div>
+        <div class="item"><img src="./../img/nature5.webp" width="100%" height="100%" alt=""></div>
+    </div>
+</body>
+
+</html>

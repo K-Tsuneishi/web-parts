@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-clip2</title>
+</head>
+<style>
+    /* 調整が効かないので非推奨(北川基準) */
+    .text {
+        position: absolute;
+        top: 45%;
+        left: 45%;
+        font-family: serif;
+        font-size: 5em;
+    }
+
+    .text::after {
+        content: attr(text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        color: transparent;
+        -webkit-text-stroke: 2px black;
+    }
+
+    img {
+        height: 80vh;
+        object-fit: cover;
+        width: 50vw;
+        animation: moveAnimation 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes moveAnimation {
+
+        0%,
+        10% {
+            transform: translate(20vw, 0);
+        }
+
+        90%,
+        100% {
+            transform: translate(0vw, 0);
+        }
+    }
+</style>
+
+<body>
+    <span class="text" text="NIKE">NIKE</span>
+    <img src="./../img/nature1.webp" alt="">
+</body>
+
+</html>

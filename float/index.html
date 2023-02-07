@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        height: 50vh;
+        gap: 10px;
+    }
+
+    .container>.item {
+        flex: 1;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: .8s all ease-in-out;
+    }
+
+    .container>.item:hover {
+        flex: 2;
+    }
+
+    .container>.item:nth-child(1) {
+        background-image: url(./../img/nature1.webp);
+    }
+
+    .container>.item:nth-child(2) {
+        background-image: url(./../img/nature2.webp);
+    }
+
+    .container>.item:nth-child(3) {
+        background-image: url(./../img/nature3.webp);
+    }
+
+    .container>.item:nth-child(4) {
+        background-image: url(./../img/nature4.webp);
+    }
+
+    .container>.item:nth-child(5) {
+        background-image: url(./../img/nature5.webp);
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mix-blend-mode</title>
+</head>
+<style>
+    body {
+        overflow: hidden;
+        margin: 0;
+        background-image: url(./../img/nature5.webp);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .backfilter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        backdrop-filter: blur(5px);
+    }
+
+    .text {
+        font-size: 4em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 99;
+        transform: translate(-50%, -50%);
+        color: rgb(92, 183, 223);
+        mix-blend-mode: difference;
+    }
+</style>
+
+<body>
+    <div class="text">SAMPLE</div>
+    <div class="backfilter"></div>
+</body>
+
+</html>
